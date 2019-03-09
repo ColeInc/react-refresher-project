@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -115,18 +115,18 @@ class App extends Component {
             style.backgroundColor = 'black';
         }
 
-        const classes = [];
+        const assignedClasses = [];
         if (this.state.persons.length < 3) {
-            classes.push('red')
+            assignedClasses.push(classes.red)
         }
         if (this.state.persons.length < 2) {
-            classes.push('bold') //so basically we are legit just adding values to this class which are going to be id's of CSS effects we want to add onto the button.
+            assignedClasses.push(classes.bold) //so basically we are legit just adding values to this class which are going to be id's of CSS effects we want to add onto the button.
         }
 
         return (
-            <div className="App">
+            <div className={classes.App}>
                 <h1>Sup lads</h1>
-                <p className={classes.join(' ')}> {/*this is just converting the array of [red, bold] to a single string "red bold" */}
+                <p className={assignedClasses.join(' ')}> {/*this is just converting the array of [red, bold] to a single string "red bold" */}
                     its ya boy cole here
                 </p>
                 <button
