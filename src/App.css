@@ -9,3 +9,28 @@
 .bold {
     font-weight: bold;
 }
+
+.App button {
+    background-color: grey;
+    color: white;
+    font: inherit;
+    width: 200px;
+    cursor: pointer; 
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.App button:hover {
+    background-color: lightgrey;
+    color:black;
+}
+
+.App button.Black {
+    background-color: black;
+    color:white;
+}
+
+.App button.Black:hover {
+    background-color: darkgrey;
+    color:white;
+}

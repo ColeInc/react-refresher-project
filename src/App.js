@@ -64,17 +64,19 @@ class App extends Component {
     }
 
     render() {
-        const style = {
-            backgroundColor: 'grey',
-            color: 'white',
-            font: 'inherit',
-            width: '200px',
-            cursor: 'pointer', 
-            border: '1px solid black',
-            padding: '8px'
-        };
+        // old initialisation of a javascript object (json format)
+        // const style = {
+            // backgroundColor: 'grey',
+            // color: 'white',
+            // font: 'inherit',
+            // width: '200px',
+            // cursor: 'pointer', 
+            // border: '1px solid black',
+            // padding: '8px'
+        // };
 
         let persons = null;
+        let buttonClass = '';
         
         if (this.state.showPersons) {
             persons = (
@@ -111,8 +113,8 @@ class App extends Component {
                     */}
                 </div>
             );
-            
-            style.backgroundColor = 'black';
+
+            buttonClass = classes.Black;
         }
 
         const assignedClasses = [];
@@ -130,9 +132,8 @@ class App extends Component {
                     its ya boy cole here
                 </p>
                 <button
-                    className={style}
-                    onClick={this.togglePersonsVisibleHandler}
-                    style={style}>Click me!
+                    className={buttonClass}
+                    onClick={this.togglePersonsVisibleHandler}>Click me!
                 </button>
                 {persons}
             </div>
