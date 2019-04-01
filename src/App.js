@@ -11,7 +11,7 @@ class App extends Component {
         ]
     }
 
-    mainButtonHander = (newName) => {
+    mainButtonHandler = (newName) => {
         //alert("Thank you for clicking me sir.");
         this.setState( {
             persons: [
